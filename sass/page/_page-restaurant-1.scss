@@ -20,7 +20,7 @@
     - menu__card
         > hover Bo / fa check
 --------------------------------------------
-    @keyframes des animation dans la page "animation"
+    @keyframes des animations dans la page "animation"
 
 
 */
@@ -52,14 +52,9 @@ main
     width: 100%;
     object-fit: cover;
    
-    height: 60vw;
+    height: clamp(230px, 10vw, 60vw);
     max-height: 500px;
     z-index: -1;
-
-    @media (min-width: 319px) and (max-width: 768px)
-    {
-        height: 230px;
-    }
 
 }
 
@@ -187,14 +182,14 @@ main
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    
 
     &:hover > .bo
     {
         width: 3.5em;
-        transition-duration: 0.5s;
-    
+        
         .fa-check-circle
-        {
+        {   
             -webkit-animation: rotation-check 0.5s;
             -o-animation: rotation-check 0.5s;
             animation: rotation-check 0.5s;

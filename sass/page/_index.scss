@@ -243,7 +243,8 @@
 
 .box-card
 {
-    width: 45%; // très important ! Administre la taille des card en fonction du width du container général ! (95%)
+    width: 90%;
+    // width: 45%; // très important ! Administre la taille des card en fonction du width du container général ! (95%)
     background: white;
     margin-bottom: 30px;
     transition: 0.3s;// permet une jolie transition responsive
@@ -254,7 +255,7 @@
 
     @media (min-width: 1000px) //taile card sur pc
     {
-        height: 380px;
+        height: 350px;
     }
 }
 
@@ -268,7 +269,8 @@
 
     @media (min-width: 1000px)
     {
-        height: 300px;
+        height: 290px;
+        line-height: 5;
     }
 }
 
@@ -276,37 +278,49 @@
 {
     display: flex;
     justify-content: space-between;
-    line-height: 1;
+    line-height: 1.5;
     font-weight: 100;
     
 
     
     .fa-heart
     {
-        transform: translateX(-50%);
         font-size: 1.5em;
-        // font-weight: none;
+        position: absolute;
         width: 10%; // permet de ne pas couper l'arète droite du coeur
-    
-        @media (min-width: 1500px)
-        {
-            transform: translateX(-100%);
-        }
+        right: 20px;
+        line-height: 1.1;  
 
-        @media (max-width: 768px)
-        {
-            transform: translateX(-100%);
+            @media (min-width: 1000px)
+            {
+                line-height: 1.5;                            
+            }
+        
+    }
 
-        }
+    @media (min-width: 1000px)
+    {
+        line-height: 1.8;
+        font-size: 110%;
+        margin-top: 0;
+       
     }
 }
 
 .box__card--footer
 {
-    margin: 10px 0 0px 15px;
+    margin: 0 0 0 15px;
     line-height: 15px;
-    font-size: clamp(15px, 1.8vw, 26px);//20px;
-    height:47px;
+    font-size: clamp(15px, 1.8vw, 18px);//20px;
+    // height:clamp(47px, 1.8vw, 5000px); //47px;
+    padding: 0 0 10px 0;
+    margin-bottom: 0px;
+
+    @media (min-width: 1000px)
+    {
+        margin: -5px 0 0px 35px;
+           
+    }
 }
 
 .tag-new 
@@ -335,23 +349,18 @@
 }
 // ------------------------------------------------------------------------responsive card version OC /!\
 // ---------------------------------
-@media screen and (max-width: 620px) // en-dessous de 620px
+@media screen and (min-width: 620px) // en-dessous de 620px
 {
-    .container-restaurant 
-    {
-        width: 100%;
-    }    
    
     .box-card 
     {
-        width: 90%;
+        width: 45%;
         
     }  
 
     .box__card--footer
     {
-        padding: 0 0 5px 0;
-        margin-bottom: 0px;
+        // margin: 10px 0 0px 15px;
     }
 }
 
