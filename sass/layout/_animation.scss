@@ -1,6 +1,7 @@
 /*Glossaire
 --------------------------------------------
     - Fa heart (animation hover/ after/ before)
+        - @keyframe heart (scale 0 à 1)
     - box-card (box shadow car pas de directive quand à son animation. J'ai enlevé scale sur le hover)
     - index-hidden (animation page index post le loading)
     - animation__loader 
@@ -33,24 +34,26 @@
            
     position: relative; //position pour absolute de fa-heart::after
     color: black;
-    transform: scale(1);
+    // transform: scale(10);
     font-weight: 100;
+    transition: all 3s;
         &:hover
         {
             cursor: pointer;
                 
                 &::after//fait apparaitre le fond red
                 {
-                    transition: opacity 0.5s ease-in;
+                    // transition: scale(1.5) 3s ease-in;
                     opacity: 1; 
-                    // transform: scale(1.01);
+                    // transform: scale(0.5);// gère la grosseur du coeur
+                    animation: heart 0.5s;
                     
                 }
 
                 &::before//fait disparaitre le coeur noir
                 {
                     opacity: 0;
-                    transition: opacity 250ms ease-in;                     
+                    transition: opacity 450ms ease-in;  //permet de faire disparaitre le coeur noir avec temps...              
                 }
         }
 
@@ -61,8 +64,8 @@
             font-weight: bold; //rempli le fond de l'icone
             z-index: -1;
             opacity: 0;
-            transition: opacity 250ms ease-in;
-            transform : scale(0.96);
+            transform: scale(1); // base taille pour le coeur visible de couleur gradient
+
             //---------------------------------------------------------------
             background: linear-gradient(0deg,$secondary 25%,$primary 100%);
             background-clip: border-box;
@@ -71,6 +74,21 @@
             //---------------------------------------------------------------
         }
 }
+
+// Keyframe apparition progressive du coeur
+@keyframes heart 
+{
+    0%
+    {
+        transform: scale(0);
+    }
+
+    100%
+    {
+        transform: scale(1);
+    }
+}
+
 //-----------------------------------------------------------------------------BOX-CARD
 .box-card
 {
@@ -293,19 +311,19 @@
 .entree
 {
     animation-name: animation_card;
-    animation-duration: 0.5s;
+    animation-duration: 3s;
 }
 
 .plat
 {
     animation-name: animation_card;
-    animation-duration: 1s;
+    animation-duration: 6s;
 }
 
 .dessert
 {
     animation-name: animation_card;
-    animation-duration: 1.5s;
+    animation-duration: 9s;
 }
 
 // -------------------------------------- Reprend aniamtion base et impose un délai entre les block anim--1 à 3

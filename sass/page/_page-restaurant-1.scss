@@ -187,17 +187,19 @@ main
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    
 
     &:hover > .bo
     {
         width: 3.5em;
-        transition-duration: 0.5s;
-    
+        // transition-duration: 0.5s;
+        
         .fa-check-circle
         {
-            -webkit-animation: rotation-check 0.5s;
-            -o-animation: rotation-check 0.5s;
-            animation: rotation-check 0.5s;
+            transform: rotate(360deg);   
+            // -webkit-animation: rotation-check 0.5s;
+            // -o-animation: rotation-check 0.5s;
+            // animation: rotation-check 0.5s;
         }
             
     }
