@@ -36,7 +36,7 @@
     color: black;
     // transform: scale(10);
     font-weight: 100;
-    transition: all 3s;
+    // transition: all 3s;
         &:hover
         {
             cursor: pointer;
@@ -311,19 +311,19 @@
 .entree
 {
     animation-name: animation_card;
-    animation-duration: 3s;
+    animation-duration: 0.5s;
 }
 
 .plat
 {
     animation-name: animation_card;
-    animation-duration: 6s;
+    animation-duration: 1s;
 }
 
 .dessert
 {
     animation-name: animation_card;
-    animation-duration: 9s;
+    animation-duration: 1.5s;
 }
 
 // -------------------------------------- Reprend aniamtion base et impose un délai entre les block anim--1 à 3
