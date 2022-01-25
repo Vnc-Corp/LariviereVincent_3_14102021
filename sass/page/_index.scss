@@ -106,13 +106,20 @@
         @media (min-width: 768px)
         {
             width: 100%;
-            
         }
     }
     
     p {
         font-weight: 100;
         margin: 20px 0; 
+       
+        width: 280px;
+
+        @media (min-width : 768px)
+        {
+            width: 350px;
+          
+        }
     }
         
 }
