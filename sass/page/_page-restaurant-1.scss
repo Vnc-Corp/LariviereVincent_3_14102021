@@ -37,7 +37,7 @@ main
 {
     font-size: clamp(15px, 5vw, 20px);
     padding-bottom: 2px;
-    margin-left: 15px;// suit le bloc menu card pour la valeur depositionnement
+    margin-left: 5%; // suit le bloc menu card pour la valeur de positionnement 
     margin-bottom: 15px;
     font-weight: lighter;
     width: 15%;
@@ -62,7 +62,7 @@ main
 {
     
     position: relative;
-    margin-bottom: -50px; //permetde remonter le container menu... /!\
+    margin-bottom: -50px; //permet de remonter le container menu... /!\
     margin-top: -3px;
     
 }
@@ -80,9 +80,13 @@ main
 
     &--restaurant
     {
-        width: clamp(320px, 50vw, 420px);
+        width: clamp(100vw, 100vw, 320px);
         padding-bottom: 25px; //espace les section restaurants  
         
+        @media (min-width: 768px) //permet le responsive row après un size column
+        {
+            width: clamp(25vw, 35vw, 320px);
+        }
     }
 }
 
